@@ -68,5 +68,6 @@ RUN apk add --update wget ca-certificates && \
            $JAVA_HOME/jre/lib/oblique-fonts && \
     cabal update && \
     cabal install shellcheck && \
+    export PATH="$HOME/.cabal/bin:$PATH" && \
     apk del wget ca-certificates && \
     rm /tmp/* /var/cache/apk/*
